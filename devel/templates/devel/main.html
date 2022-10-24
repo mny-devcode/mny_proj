@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <title>MNY :: development</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="@dabzse, @mny">
+    <meta name="author" generator="DABZSE editor">
+
+    <link href="{% static 'images/favicon.ico' %}" rel="icon" type="image/x-icon">
+    <link href="{% static 'css/tailwind-2.2.19.min.css' %}" rel="stylesheet" type="text/css">
+    <link href="{% static 'bs-icons/font/bootstrap-icons.css' %}" rel="stylesheet" type="text/css">
+    <link href="{% static 'css/bootstrap-5.2.2.min.css' %}" rel="stylesheet" type="text/css">
+    <link href="{% static 'css/main.css' %}" rel="stylesheet" type="text/css">
+</head>
+<body class="d-flex flex-column h-100">
+    <main class="flex-shrink-0">
+        {% include 'devel/inc.navbar.html' %}
+        <header class="bg-dark pt-3">
+            <div class="container px-5">
+                <div class="row gx-5 align-items-center justify-content-center">
+                    <div class="col-xl-5 col-xxl-6 d-none d-xl-block"><img class="img-fluid rounded-3 my-5" src="{% static 'images/mny.png'%}" alt="..." /></div>
+                    <div class="col-lg-8 col-xl-7 col-xxl-6">
+                        <div class="my-5 text-center text-xl-start">
+                            <h1 class="display-5 fw-bolder text-white mb-2">Mihaly Nyilas</h1>
+                            <p class="lead fw-normal text-white-50 mb-4">
+                                It’s not the best photo about me, but for now is enough.<br>
+                                If you can’t see it, that’s because of your screen resolution.<br>
+                                So you can click <a href="#">here</a> to see me.
+                            </p>
+                            <p class="lead fw-normal text-white-50 mb-4">
+                                I don’t think so this website will be translated to any other language, because the IT’s language is English. So everybody, who wants to learn/practice, and work in IT, should know and use English. For now this is the best habit.
+                            </p>
+                            <p class="lead fw-normal text-white-50 mb-4">
+                                Excuse me for my English language! Unfortunately, it’s not perfect.
+                            </p>
+                            <div class="d-grid gap-3 d-sm-flex justify-content-sm-center justify-content-xl-start">
+                                <a class="btn btn-primary btn-lg px-4 me-sm-3" href="http://dabzse.net" target="_blank">Go to my older home page, written in pure PHP</a>
+                                <a class="btn btn-outline-light btn-lg px-4" href="https://dabzse-cv.herokuapp.com" target="_blank">CV-like page in Hungarian, not updated, written in python-django 3.2.x</a>
+                            </div>
+                            <p class="lead fw-normal text-white-50 mt-4">
+                                This website is written in pure Python with Django framework, bootstrap and tailwind, but not yet completely finished.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <section class="py-1">
+            <div class="container px-5 my-5">
+                <div class="row gx-5 justify-content-center">
+        
+{% block content %}
+
+{% endblock content %}
+
+                </div>
+            </div>
+        </section>
+
+    </main>
+    <!-- Footer-->
+    <footer class="bg-dark py-4 mt-auto">
+        <div class="container px-5">
+            <div class="row align-items-center justify-content-between flex-column flex-sm-row">
+                <div class="col-auto">
+                    <div class="small m-0 text-white">Copyright &copy; DABZSE &mdash; 2022 (since 2008)</div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Bootstrap core JS-->
+    <script src="{% static 'js/bootstrap-5.2.2.bundle.min.js' %}"></script>
+    <!-- Core theme JS-->
+    <script src="{% static 'js/at.js' %}"></script>
+</body>
+</html>

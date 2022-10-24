@@ -1,0 +1,3 @@
+mny_proj/__pycache__/*
+devel/__pycache__/*
+devel/migrations/__pycache__/*
