@@ -25,7 +25,7 @@ SECRET_KEY = "NYILAS.DEV+NewZealand&Australia"
 DEBUG = False
 # DEBUG = True
 
-ALLOWED_HOSTS = ["127.0.0.1"]
+ALLOWED_HOSTS = ["127.0.0.1", ".herokuapp.com"]
 
 
 # Application definition
