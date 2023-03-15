@@ -13,6 +13,15 @@ html, body {
     color: #222;
 }
 
+.accordion-body {
+    padding: 0 !important;
+}
+
+.accordion-button {
+    font-size: 3rem;
+    font-variant: small-caps;
+}
+
 #cert {
     width: 97%;
     max-width: 1000px;
