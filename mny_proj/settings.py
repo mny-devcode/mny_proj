@@ -13,7 +13,7 @@ with open(Path(BASE_DIR, 'key')) as key:
 DEBUG = True
 # DEBUG = False
 
-ALLOWED_HOSTS = ["127.0.0.1", ".railway.app"]
+ALLOWED_HOSTS = ["127.0.0.1", "localhost", ".railway.app"]
 
 
 # Application definition
