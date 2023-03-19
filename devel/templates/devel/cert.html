@@ -1,8 +1,5 @@
 {% extends "devel/main.html" %} {% load static %} {% block content %}
-<div
-    id="cert"
-    class="cert-container bg-gradient-to-r from-blue-100 to-blue-400"
->
+<div id="cert" class="cert-container bg-gradient-to-r from-blue-100 to-blue-400">
     <article>
         <h2 class="py-4 text-center text-blue-800 hover:text-red-500">
             Some "certifications" I have earned in the learning apps.<br>
@@ -12,29 +9,45 @@
         </h2>
     </article>
 
+    <hr>
+    <h3>SoloLearn certifications</h3>
     <div class="grid grid-cols-4 gap-4">
-        {% for certification in certifications %}
+        {% for cert_sl in SoloLearn %}
         <div class="justify-self-center text-center my-4">
             <div class="flex justify-center">
                 <img
-                    src="{{ certification.image.url }}"
-                    alt="{{ certification.description }}"
+                src="{{ cert_sl.image.url }}"
+                alt="{{ cert_sl.description }}"
+                    width="200"
+                    class="border border-4 border-primary rounded"
+                    />
+            </div>
+            <p class="text-lg text-gray-700 font-bold">
+                {{ cert_sl.description }}
+            </p>
+        </div>
+        {% endfor %}
+    </div>
+
+    <hr>
+    <h3>GrassHopper certifications (it will close down on June 15, 2023.)</h3>
+    <div class="grid grid-cols-4 gap-4">
+        {% for cert_gh in GrassHopper %}
+        <div class="justify-self-center text-center my-4">
+            <div class="flex justify-center">
+                <img
+                    src="{{ cert_gh.image.url }}"
+                    alt="{{ certicert_ghfication.description }}"
                     width="200"
                     class="border border-4 border-primary rounded"
                 />
             </div>
             <p class="text-lg text-gray-700 font-bold">
-                {{ certification.description }}
+                {{ cert_gh.description }}
             </p>
         </div>
         {% endfor %}
     </div>
-<!--
-    TODO: .filter_by(learnt_place)
-    ++ SoloLearn goes here ++
-    <hr />
-    ++ GrasHopper goes here ++
--->
 </div>
 
 {% endblock content %}
