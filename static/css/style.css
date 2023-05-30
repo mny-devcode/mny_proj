@@ -48,50 +48,12 @@ p {
 
 #cv {
     width: 90%;
-    max-width: 800px;
+    max-width: 1024px;
     background: #f3f3f3;
-    margin: 30px auto;
-}
-
-#cert {
-    width: 97%;
-    max-width: 1000px;
-    margin: 30px auto;
-}
-
-.cert-container {
-    position: relative;
-    padding-bottom: 3px;
-    border-bottom: 3px solid black;
-}
-
-.cert-container:before, .cert-container:after {
-    content: "";
-    position: absolute;
-    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(transparent), to(#000));
-    background-image: -webkit-linear-gradient(transparent, #000);
-    background-image: -moz-linear-gradient(transparent, #000);
-    background-image: -o-linear-gradient(transparent, #000);
-    background-image: linear-gradient(transparent, #000);
-    top: -3px;
-    bottom: -3px;
-    width: 3px;
-}
-
-.cert-container:before {
-    left: -3px;
-}
-
-.cert-container:after {
-    right: -3px;
-}
-
-#cert h2 {
-    font-size: 2.3rem;
 }
 
 .main_details {
-    padding: 25px 35px;
+    padding: 3px 3px;
     border-bottom: 2px solid #1c40e0;
     background: #ededed;
 }
