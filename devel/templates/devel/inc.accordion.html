@@ -1,0 +1,51 @@
+{% load static %}
+{% block accordion %}
+
+<div class="accordion mt-5" id="accordion_whoami">
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="whoami">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#mny_whoami" aria-expanded="false" aria-controls="mny_whoami">
+            Who am I?
+            </button>
+        </h2>
+        <div id="mny_whoami" class="accordion-collapse collapse" aria-labelledby="whoami" data-bs-parent="#accordion_whoami">
+            <div class="accordion-body">
+                <header class="bg-dark pt-3">
+                    <div class="container px-5 mt-5">
+                        <div class="row gx-5 align-items-center justify-content-center">
+                            <div class="col-xl-5 col-xxl-6 d-none d-xl-block">
+                                <img class="img-fluid rounded-3 my-5" src="{% static 'images/mny.png' %}" alt="@mny">
+                            </div>
+                            <div class="col-lg-8 col-xl-7 col-xxl-6">
+                                <div class="my-5 text-center text-xl-start">
+                                    <h1 class="display-5 fw-bolder text-white mb-2">Mihaly Nyilas</h1>
+                                    <p class="lead fw-normal text-white-50 mb-4">
+                                        It’s not the best photo about me, but for now is enough.<br>
+                                        If you can’t see it, that’s because of your screen resolution.<br>
+                                        [work in progress to fix it, just the time...]<br>
+                                        So you can click <a href="{% static 'images/mny.png' %}" alt="Mihaly Nyilas" target="_blank">here</a> to see me. (opens in new tab)
+                                    </p>
+                                    <p class="lead fw-normal text-white-50 mb-4">
+                                        I don’t think so this website will be translated to any other language, because the IT’s language is English. So everybody, who wants to learn/practice, and work in IT, should know and use English. For now this is the best habit.
+                                    </p>
+                                    <p class="lead fw-normal text-white-50 mb-4">
+                                        Excuse me for my English language! Unfortunately, it’s not perfect.
+                                    </p>
+                                    <div class="d-grid gap-3 d-sm-flex justify-content-sm-center justify-content-xl-start">
+                                        <a class="btn btn-primary btn-lg px-4 me-sm-3" href="http://dabzse.net" target="_blank">Go to my older/other website, written in PHP without any FrameWork, and no CMS was used.</a>
+                                        <a class="btn btn-outline-light btn-lg px-4" href="https://dabzse.github.io" target="_blank">CV-like page in Hungarian, not updated, originally was written in python-django 3.2.x, but heroku did rid it. So now is html and on github.io; but will be included here in English, as you can see it in the menu option.</a>
+                                    </div>
+                                    <p class="lead fw-normal text-white-50 mt-4">
+                                        This website is written in Python with Django framework, bootstrap and tailwind, but not yet completely finished.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </header>    
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock accordion %}
