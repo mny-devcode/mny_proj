@@ -1,4 +1,12 @@
-{% extends "devel/main.html" %} {% load static %} {% block content %}
+{% extends "devel/main.html" %}
+{% load static %}
+
+{% block accordion %}
+    {% include 'devel/inc.accordion.html' %}
+{% endblock accordion %}
+
+{% block content %}
+
 <div id="cert" class="cert-container bg-gradient-to-r from-blue-100 to-blue-400">
     <article>
         <h2 class="py-4 text-center text-blue-800 hover:text-red-500">
@@ -16,11 +24,11 @@
         <div class="justify-self-center text-center my-4">
             <div class="flex justify-center">
                 <img
-                src="{{ cert_sl.image.url }}"
-                alt="{{ cert_sl.description }}"
+                    src="{{ cert_sl.image.url }}"
+                    alt="{{ cert_sl.description }}"
                     width="200"
                     class="border border-4 border-primary rounded"
-                    />
+                >
             </div>
             <p class="text-lg text-gray-700 font-bold">
                 {{ cert_sl.description }}
@@ -37,10 +45,10 @@
             <div class="flex justify-center">
                 <img
                     src="{{ cert_gh.image.url }}"
-                    alt="{{ certicert_ghfication.description }}"
+                    alt="{{ cert_gh.description }}"
                     width="200"
                     class="border border-4 border-primary rounded"
-                />
+                >
             </div>
             <p class="text-lg text-gray-700 font-bold">
                 {{ cert_gh.description }}
