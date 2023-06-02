@@ -156,7 +156,7 @@ section:last-child {
 .section_title h1 {
     font-family: FreeSans, Helvetica, Arial, sans-serif;
     font-style: italic;
-    font-size: 1.5em;
+    font-size: 1.7em;
     color: #1c40e0;
     padding-left: .85rem;
 }
@@ -168,6 +168,12 @@ section:last-child {
     padding-top: 1rem;
 }
 
+.personal {
+    color: #1982e4;
+    font-family: FreeSans, Helvetica, Arial, sans-serif;
+    font-size: 1.25em;
+    font-weight: bold;
+}
 .sub_details {
     font-size: 0.97em;
     font-style: italic;
