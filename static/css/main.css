@@ -22,6 +22,14 @@ html, body {
     font-variant: small-caps;
 }
 
+#mny img {
+    content: url("/static/images/mny.png");
+}
+
+#mny img:hover {
+    content: url("/static/images/mny.jpg");
+}
+
 #cert {
     width: 97%;
     max-width: 1000px;
