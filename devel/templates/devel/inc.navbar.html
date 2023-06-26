@@ -1,6 +1,7 @@
+{% load static %}
 <nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-primary">
     <div class="container px-5">
-        <a class="navbar-brand" href="{% url 'home' %}">:: 111 11 100 ::</a>
+        <a class="navbar-brand" href="{% url 'home' %}"><img src="{% static 'images/mny.svg' %}" alt="dev-logo" width="120"></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navibar">
             <span class="navbar-toggler-icon"></span>
         </button>

@@ -1,0 +1,84 @@
+<svg fill="none" viewBox="0 0 350 82" xmlns="http://www.w3.org/2000/svg">
+    <style>
+        .headline {
+            color: #1982e4;
+            align-items: center;
+            display: flex;
+            font-family: "Liberation Serif", sans-serif;
+            font-weight: 527;
+            font-size: 31pt;
+            justify-content: start;
+            perspective: 815px;
+            white-space: break-spaces;
+            box-sizing: border-box;
+            position: absolute;
+            left: 16px;
+            right: 0;
+            top: 3px;
+            bottom: 0;
+            margin: 4px;
+        }
+
+        .word, .char {
+            animation-delay: var(--del);
+            animation-direction: var(--dir, normal);
+            animation-duration: var(--dur);
+            animation-iteration-count: var(--it, infinite);
+            animation-name: var(--name);
+            animation-timing-function: var(--tf);
+            animation-fill-mode: var(--fill, forwards);
+            display: inline-block;
+            position: relative;
+            transform-origin: 27% 85%;
+            z-index: 1;
+            box-sizing: border-box;
+            text-shadow:
+                -1px -1px 4px #8a0303,
+                0px -1px 16px #1982e4,
+                1px -1px 4px #8a0303,
+                -1px  0px 10px #8a0303,
+                1px  0px 0px #666666,
+                -1px  1px 0px #666666,
+                0px  1px 10px #8a0303,
+                1px  1px 0px #666666;
+        }
+
+        .headline-float .char {
+            --name: float;
+            --dur: 3500ms;
+            --del: calc(var(--char-index) * -0.7s);
+            --tf: ease-in-out;
+            --dir: alternate;
+        }
+
+        .headline-float .char:nth-child(2n) {
+            --name: float-alt;
+        }
+
+        @keyframes float {
+            from {
+                transform: translate(3%, -13%) rotate(-1deg);
+            }
+            to {
+                transform: translate(-7%, 4%) rotate(3deg);
+            }
+        }
+
+        @keyframes float-alt {
+            from {
+                transform: translate(3%, -4%) rotate(-1deg);
+            }
+            to {
+                transform: translate(1%, 7%) rotate(3deg);
+            }
+        }
+    </style>
+
+    <foreignObject width="100%" height="100%">
+        <div xmlns="http://www.w3.org/1999/xhtml">
+            <h2 class="headline headline-float words chars splitting" style="--word-total:2; --char-total:12;">
+                <span class="word" data-word="@dabzse" style="--word-index:0;"><span class="char" data-char="@" style="--char-index:0;">@</span><span class="char" data-char="d" style="--char-index:1;">d</span><span class="char" data-char="a" style="--char-index:2;">a</span><span class="char" data-char="b" style="--char-index:3;">b</span><span class="char" data-char="z" style="--char-index:4;">z</span><span class="char" data-char="s" style="--char-index:5;">s</span><span class="char" data-char="e" style="--char-index:6;">e</span></span><span class="whitespace"> </span><span class="word" data-word="|" style="--word-index:1;"><span class="char" data-char="|" style="--char-index:7;">|</span></span><span class="whitespace"> </span><span class="word" data-word="@mny" style="--word-index:2;"><span class="char" data-char="@" style="--char-index:8;">@</span><span class="char" data-char="m" style="--char-index:9;">m</span><span class="char" data-char="n" style="--char-index:10;">n</span><span class="char" data-char="y" style="--char-index:11;">y</span></span>
+            </h2>
+        </div>
+    </foreignObject>
+</svg>
