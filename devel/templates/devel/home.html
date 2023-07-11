@@ -7,15 +7,46 @@
 
 {% block content %}
 
+<div class="edu-info">
 <h2>I thought a lot of what do I have or need to write here...</h2>
 <p>
     Finally I have decided: I will update this little part of my "dev" website when I will complete my final exam at the university for that course which I have started in September 2020. So I made it!
 </p>
-<h3>Final Exam's Date: June 19, 2023</h3>
-<h3>Training Name: Computer Science</h3>
-<h3>Level: Higher Education Vocational Training</h3>
-<h3>Mode: Correspondence Training</h3>
-<h3>Programme Type: Accredited Vocational Higher Education</h3>
+    <h3>Final Exam's Date: June 19, 2023</h3>
+    <h3>Training Name: Computer Science</h3>
+    <h3>Level: Higher Education Vocational Training</h3>
+    <h3>Mode: Correspondence Training</h3>
+    <h3>Programme Type: Accredited Vocational Higher Education</h3>
+    <h2 class="my-3">Information about the Qualification</h2>
+    <p class="mb-0">Name of the Qualification</p>
+    <h3>Computer Scientist Assistant in Software Development</h3>
+    <p class="mb-0 mt-3">Main Field of Study</p>
+    <h3>Software Information Technology</h3>
+</div>
+
 <br><br><hr>
-<p>Upcoming planned news: after the graduation ceremony (July 8, 2023) some photos from the event.</p>
+
+<div class="row row-cols-1 row-cols-md-2 mb-3 text-center">
+    <div class="col">
+        <div class="card mb-4 rounded-3 shadow-sm border-primary">
+            <div class="card-header py-3 text-bg-primary border-primary">
+                <h4 class="my-0 fw-normal">@DABZSE | @MNY</h4>
+            </div>
+            <div class="card-body">
+                <img src="{% static 'images/flir_20230708T112741.jpg' %}" alt="Mihaly Nyilas IT">
+            </div>
+        </div>
+    </div>
+    <div class="col">
+        <div class="card mb-4 rounded-3 shadow-sm border-primary">
+            <div class="card-header py-3 text-bg-primary border-primary">
+                <h4 class="my-0 fw-normal">@MNY | @DABZSE</h4>
+            </div>
+            <div class="card-body">
+                <img src="{% static 'images/flir_20230708T112743.jpg' %}" alt="Mihaly Nyilas IT">
+            </div>
+        </div>
+    </div>
+</div>
+
 {% endblock content %}
