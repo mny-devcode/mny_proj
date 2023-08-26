@@ -11,11 +11,13 @@ def cert(request):
     learn_places = LearnPlace.objects.all()
     SoloLearn = Certification.objects.filter(learnt_from=1)
     GrassHopper = Certification.objects.filter(learnt_from=2)
+    classname = Certification.objects.values('classname')
 #    certifications = Certification.objects.all()
     context = {
         'learn_places': learn_places,
         'SoloLearn': SoloLearn,
         'GrassHopper': GrassHopper,
+        'classname': classname,
 #        'certifications': certifications
     }
     return render(request, "devel/cert.html", context)

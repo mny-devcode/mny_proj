@@ -1,6 +1,9 @@
 {% extends "devel/main.html" %}
 {% load static %}
 
+{% block cert_css %}    <link href="{% static 'css/cert.css' %}" rel="stylesheet" type="text/css">{% endblock cert_css %}
+
+
 {% block whoami %}
     {% include 'devel/inc.whoami.html' %}
 {% endblock whoami %}
@@ -11,51 +14,49 @@
     <article>
         <h2 class="py-4 text-center text-blue-800 hover:text-red-500">
             Some "certifications" I have earned in the learning apps.<br>
-            These don’t approves my knowledge, but it means:<br>I’m not stupid for
-            coding!<br>
+            These don’t approves my knowledge, but it means:<br>
+            I’m not stupid for coding!<br>
             Just need a more practice, for practice I need more time...
         </h2>
     </article>
+    <div id="filter_content">
+        <button class="btn rounded-pill active" onclick="filter_selection('all')">All</button>
+        <button class="btn rounded-pill" onclick="filter_selection('sl')">SoloLearn</button>
+        <button class="btn rounded-pill" onclick="filter_selection('gh')">GrassHopper</button>
+        <button class="btn rounded-pill" onclick="filter_selection('python')">Python, R, DS, ML</button>
+        <button class="btn rounded-pill" onclick="filter_selection('web')">Web + SQL</button>
+        <button class="btn rounded-pill" onclick="filter_selection('cj')">C, CPP, C#, Java</button>
+        <button class="btn rounded-pill" onclick="filter_selection('other')">Other</button>
 
-    <hr>
-    <h3>SoloLearn certifications</h3>
-    <div class="grid grid-cols-4 gap-4">
-        {% for cert_sl in SoloLearn %}
-        <div class="justify-self-center text-center my-4">
-            <div class="flex justify-center">
-                <img
-                    src="{{ cert_sl.image.url }}"
-                    alt="{{ cert_sl.description }}"
-                    width="200"
-                    class="border border-4 border-primary rounded"
-                >
-            </div>
-            <p class="text-lg text-gray-700 font-bold">
-                {{ cert_sl.description }}
-            </p>
-        </div>
-        {% endfor %}
-    </div>
+        <hr>
 
-    <hr>
-    <h3>GrassHopper certifications (it is closed down since June 15, 2023.)</h3>
-    <div class="grid grid-cols-4 gap-4">
-        {% for cert_gh in GrassHopper %}
-        <div class="justify-self-center text-center my-4">
-            <div class="flex justify-center">
-                <img
-                    src="{{ cert_gh.image.url }}"
-                    alt="{{ cert_gh.description }}"
-                    width="200"
-                    class="border border-4 border-primary rounded"
-                >
+        <h3>SoloLearn certifications</h3>
+        <div class="row">
+            {% for cert_sl in SoloLearn %}
+            <div class="column {{ cert_sl.classname }}">
+                <div class="content">
+                    <img src="{{ cert_sl.image.url }}" alt="{{ cert_sl.description }}" class="border border-4 border-primary rounded">
+                </div>
+                <p class="text-lg text-gray-700 font-bold text-center">{{ cert_sl.description }}</p>
             </div>
-            <p class="text-lg text-gray-700 font-bold">
-                {{ cert_gh.description }}
-            </p>
+            {% endfor %}
         </div>
-        {% endfor %}
+
+        <hr>
+
+        <h3>GrassHopper certifications (it is closed down since June 15, 2023.)</h3>
+        <div class="row">
+            {% for cert_gh in GrassHopper %}
+            <div class="column {{ cert_gh.classname }}">
+                <div class="content">
+                    <img src="{{ cert_gh.image.url }}" alt="{{ cert_gh.description }}" class="border border-4 border-primary rounded">
+                </div>
+                <p class="text-lg text-gray-700 font-bold text-center">{{ cert_gh.description }}</p>
+            </div>
+            {% endfor %}
+        </div>
     </div>
 </div>
 
 {% endblock content %}
+{% block cert_filter %}    <script src="{% static 'js/filter.js' %}"></script>{% endblock %}

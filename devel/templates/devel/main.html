@@ -17,6 +17,10 @@
     <link href="{% static 'css/bootstrap-5.3.1.min.css' %}" rel="stylesheet" type="text/css">
     <link href="{% static 'css/style.css' %}" rel="stylesheet" type="text/css">
     <link href="{% static 'css/main.css' %}" rel="stylesheet" type="text/css">
+{% block cert_css %}
+
+{% endblock cert_css %}
+    
 
 </head>
 <body class="d-flex flex-column h-100">
@@ -54,5 +58,8 @@
     <script src="{% static 'js/bootstrap-5.3.1.bundle.min.js' %}"></script>
     <script src="{% static 'js/at.js' %}"></script>
 
+{% block cert_filter %}
+
+{% endblock cert_filter %}
 </body>
 </html>
