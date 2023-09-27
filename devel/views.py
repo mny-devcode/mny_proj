@@ -29,3 +29,6 @@ def cv(request):
 
 def devel(request):
     return render(request, "devel/devel.html", {})
+
+def affiliates(request):
+    return render(request, "devel/affiliates.html", {})

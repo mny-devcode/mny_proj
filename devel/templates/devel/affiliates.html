@@ -1,0 +1,49 @@
+{% extends "devel/main.html" %}
+{% load static %}
+
+{% block aff_css %}    <link href="{% static 'css/affiliate.css' %}" rel="stylesheet" type="text/css">{% endblock aff_css %}
+
+{% block whoami %}
+    {% include 'devel/inc.whoami.html' %}
+{% endblock whoami %}
+
+{% block content %}
+
+<div class="album pt-2 pb-4 bg-light">
+    <h1 class="text-center text-danger pb-2">
+        By clicking on any link below, it will go to another site!<br>
+        Every link will be opened in a new tab.<br>
+        Keep it in your mind: their website is using cookies.<br>
+        I'm not responsible for their cookies!
+    </h1>
+    <div class="container d-flex pt-2">
+        <h2 class="text-center pb-2 pt-3">
+            <a href="http://dabzse.net/go.php?to=playchess" target="_blank" title="chess.com membership plans">
+                <img src="{% static 'images/logos/chess_premium.png' %}" alt="see all membership plans">
+            </a>
+            <strong>see all membership plans</strong>
+        </h2>
+        <h2 class="text-center pb-2 pt-3">
+            <a href="http://dabzse.net/go.php?to=chessprofile" target="_blank" title="my profile on chess.com">
+                <img src="{% static 'images/logos/chess_play.png' %}" alt="my profile on chess.com">
+            </a>
+            <strong>my profile on chess.com</strong>
+        </h2>
+    </div>
+    <div class="container d-flex pt-2">
+        <h2 class=" text-center pb-2 pt-3">
+            <a href="http://dabzse.net/go.php?to=gitkraken" target="_blank" title="gitkraken">
+                <img src="{% static 'images/logos/gitkraken.png' %}" alt="GitKraken: one of the best GIT clients">
+            </a>
+            <strong>GitKraken: one of the best GIT clients</strong>
+        </h2>
+        <h2 class=" text-center pb-2 pt-3">
+            <a href="http://dabzse.net/go.php?to=gitlens" target="_blank" title="gitlens">
+                <img src="{% static 'images/logos/gitlens.png' %}" alt="GitLens: for your IDE/TextEditor">
+            </a>
+            <strong>GitLens: for your IDE/TextEditor</strong>
+        </h2>
+    </div>
+</div>
+
+{% endblock content %}
