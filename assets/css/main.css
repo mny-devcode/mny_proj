@@ -1,0 +1,96 @@
+li.nav-item a.nav-link {
+    color: #fff;
+    font-weight: bold;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, section {
+    display: block;
+}
+
+html, body {
+    font-family: FreeSans, helvetica, arial, sans-serif;
+    font-size: 16px;
+    color: #222;
+}
+
+.accordion-body {
+    padding: 0 !important;
+}
+
+.accordion-button {
+    font-size: 3rem;
+    font-variant: small-caps;
+}
+
+#mny img {
+    content: url("/static/images/mny.png");
+}
+
+#mny img:hover {
+    content: url("/static/images/mny.jpg");
+}
+
+#cert {
+    width: 97%;
+    max-width: 1000px;
+    margin: 30px auto;
+}
+
+.cert-container {
+    position: relative;
+    padding-bottom: 3px;
+    border-bottom: 3px solid black;
+}
+
+.cert-container:before, .cert-container:after {
+    content: "";
+    position: absolute;
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(transparent), to(#000));
+    background-image: -webkit-linear-gradient(transparent, #000);
+    background-image: -moz-linear-gradient(transparent, #000);
+    background-image: -o-linear-gradient(transparent, #000);
+    background-image: linear-gradient(transparent, #000);
+    top: -3px;
+    bottom: -3px;
+    width: 3px;
+}
+
+.cert-container:before {
+    left: -3px;
+}
+
+.cert-container:after {
+    right: -3px;
+}
+
+#cert h2 {
+    font-size: 2.3rem;
+}
+
+.badge {
+    padding: 0.5cm 0.7cm;
+    font-size: 1rem;
+}
+
+.card-title {
+    color: #8a0303;
+    font-size: 20pt;
+}
+
+.devellinks {
+    color: #1982e4;
+    font-size: 16pt;
+    font-weight: bold;
+    line-height: 1.35;
+}
+
+
+.edu-info h2 {
+    color: #8a0303;
+    font-size: 1.82em;
+}
+
+.edu-info h3 {
+    color: #000;
+    font-style: normal;
+}
