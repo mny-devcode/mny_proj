@@ -4,14 +4,13 @@ from pathlib import Path
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 
-
 # SECURITY WARNING: keep the secret key used in production secret!
 with open(Path(BASE_DIR, 'key')) as key:
     SECRET_KEY = key.read().strip()
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
-# DEBUG = False
+# DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ["127.0.0.1", "localhost", ".railway.app", ".vercel.app"]
 
@@ -103,17 +102,14 @@ USE_TZ = True
 
 
 STATIC_URL = "/static/"
-MEDIA_URL = "/images/"
+MEDIA_URL = "/static/images/"
 
-
-if DEBUG:
-    STATICFILES_DIRS = [
-        BASE_DIR / "static"
-]
-else:
-    STATIC_ROOT = BASE_DIR / "static"
-
+STATIC_ROOT = BASE_DIR / "assets"
 MEDIA_ROOT =  BASE_DIR / "static/images"
+
+STATICFILES_DIRS = [
+    BASE_DIR / "static",
+]
 
 
 # Default primary key field type
