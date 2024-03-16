@@ -127,26 +127,9 @@ Hardworking, motivated / self-motivated husband and family man.
                 </div>
                 <div class="section_content">
                     <ul class="key_skills">
-                        <li>Linux</li>
-                        <li>flexibility</li>
-                        <li>enthusiastic</li>
-                        <li>reliable</li>
-                        <li>honest</li>
-                        <li>prudent</li>
-                        <li>wise</li>
-                        <li>clever</li>
-                        <li>creative</li>
-                        <li>persistent</li>
-                        <li>monotony tolerance</li>
-                        <li>accurate</li>
-                        <li>systematic</li>
-                        <li>good team player</li>
-                        <li>problem solving skills</li>
-                        <li>a constant and fast learner</li>
-                        <li>logical mind with great memory</li>
-                        <li>keeping up-to-date knowledge</li>
-                        <li>management of computer controlled systems</li>
-                        <li>scheduled maintenance on my works</li>
+                        {% for skill in abilities %}
+                        <li>{{ skill }}</li>
+                        {% endfor %}
                     </ul>
                 </div>
                 <div class="clear"></div>
