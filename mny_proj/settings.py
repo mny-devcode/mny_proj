@@ -5,7 +5,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 
 # SECURITY WARNING: keep the secret key used in production secret!
-with open(Path(BASE_DIR, 'key')) as key:
+with open(Path(BASE_DIR, 'key'), encoding='utf-8') as key:
     SECRET_KEY = key.read().strip()
 
 # SECURITY WARNING: don't run with debug turned on in production!
