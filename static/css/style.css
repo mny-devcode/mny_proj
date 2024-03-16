@@ -148,7 +148,7 @@ section:last-child {
     padding: 20px 0 10px;
 }
 
-article {
+article.show_flex {
     display: flex !important;
     flex-direction: row;
     flex-wrap: wrap;
