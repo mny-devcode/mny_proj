@@ -22,11 +22,11 @@ html, body {
     font-variant: small-caps;
 }
 
-#mny img {
+#mny img.whoami {
     content: url("/static/images/mny.png");
 }
 
-#mny img:hover {
+#mny img.whoami:hover {
     content: url("/static/images/mny.jpg");
 }
 
